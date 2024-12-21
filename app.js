@@ -5,6 +5,7 @@ var content =document.querySelector('.content');
 var audio2 = document.getElementById("Audio2");
 var audio = document.getElementById('myAudio');
 var audio3 = document.getElementById('Audio3');
+var giftb = document.querySelector('.gift-bottom');
 
 // Đảm bảo người dùng tương tác với trang trước khi bật âm thanh
 document.body.addEventListener('click', function() {
@@ -84,21 +85,17 @@ audio.src="Slient night.mp3";
 // audio.play();
 audio2.play();
 }
-content.onclick = function(){
+giftb.onclick = function(){
     boxContent.classList.add('active')
 };
 
 Close.onclick = function(){
-    boxContent.classList.remove('active')
+    boxContent.classList.remove('active');
     audio2.pause();
     audio2.src = "MerryChristmas.mp3";
     audio3.play();
-    boxgift.classList.remove('active')
-
-
-
-    
-
+    boxgift.classList.remove('active');
+    Close.classList.remove('active');
 };
 
 
